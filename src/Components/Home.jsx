@@ -45,6 +45,51 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                            <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-blue-400">
+                                <input type="checkbox" className="sr-only" />
+                                <div className="flex flex-col items-center gap-2 mt-1">
+                                    <div class="p-2 rounded-lg transition-colors duration-300 bg-blue-100 group-hover:bg-blue-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-blue-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <span className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-blue-600">Custom Link</span>
+                                </div>
+                            </label>
+                            <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-emerald-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-emerald-400">
+                                <input type="checkbox" className="sr-only" data-testid="landing-option-password" />
+                                <div className="flex flex-col items-center gap-2 mt-1">
+                                    <div className="p-2 rounded-lg transition-colors duration-300 bg-emerald-100 group-hover:bg-emerald-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-emerald-600">
+                                      </svg>
+                                      </div>
+                                      <span data-v-a79b16bd="" className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-emerald-600">Password Protection</span>
+                                </div>
+                            </label>
+                            <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-purple-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-purple-400">
+                                <input type="checkbox" className="sr-only" data-testid="landing-option-dates" />
+                                <div className="flex flex-col items-center gap-2 mt-1">
+                                    <div className="p-2 rounded-lg transition-colors duration-300 bg-purple-100 group-hover:bg-purple-200">
+                                        <svg data-v-a79b16bd="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-purple-600">
+                                        </svg>
+                                    </div>
+                                    <span className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-purple-600">Set Expiration</span>
+                                </div>
+                            </label>
+                            <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-amber-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-amber-400">
+                                <input type="checkbox" className="sr-only" data-testid="landing-option-qrcode" />
+                                <div className="flex flex-col items-center gap-2 mt-1">
+                                    <div className="p-2 rounded-lg transition-colors duration-300 bg-amber-100 group-hover:bg-amber-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z">
+                                        </path>
+                                        </svg>
+                                    </div>
+                                    <span className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-amber-600">Generate QR Code</span>
+                                </div>
+                            </label>
+                        </div>
                     </section>
                 </main>
             </div>
