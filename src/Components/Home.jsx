@@ -1,10 +1,10 @@
+
 const Home = () => {
     return (
         <>
             <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white">
                 <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
                     <div className="relative">
-                        {/* Navigation */}
                         <nav className="bg-[#1e293bf2] px-5 py-5 flex items-center justify-center gap-4 text-xl">
                             <button className="text-[#cbd5e1]">Platform</button>
                             <button className="text-[#cbd5e1]">Solution</button>
@@ -30,9 +30,9 @@ const Home = () => {
                                 into powerful URLs</h1>
                             <p className="pt-5 text-xl text-[#cbd5e1] mb-8 max-w-2xl mx-auto">Shorten, customize and track your links with advanced analytics. The complete solution to manage your digital campaigns.</p>
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 flex items-center justify-center">
                             <div className="relative">
-                                <input type="url" placeholder="Paste your URL here... (e.g. https://mysite.com/very-long-page)" className="w-half pl-4 pr-24 sm:pr-36 py-4 text-lg border rounded-xl focus:ring-2 focus:border-transparent outline-none transition-all duration-200 border-gray-300 focus:ring-blue-500 dark:bg-slate-900/80 dark:text-gray-100"></input>
+                                <input type="url" placeholder="Paste your URL here... (e.g. https://mysite.com/very-long-page)" className="w-half pl-4  mb-3 pr-24 sm:pr-36 py-4 text-lg border rounded-xl focus:ring-2 focus:border-transparent outline-none transition-all duration-200 border-gray-300 focus:ring-blue-500 dark:bg-slate-900/80 dark:text-gray-100   "></input>
                                 <div className="absolute inset-y-0 right-2 flex items-center gap-1.5 pointer-events-none">
                                     <button type="button" className="pointer-events-auto inline-flex items-center justify-center h-9 w-9 rounded-lg text-red-600 dark:text-red-300 bg-red-50/70 dark:bg-red-900/30 hover:bg-red-100 dark:hover:bg-red-900/50 hover:shadow-sm active:scale-95 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-red-400"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="h-5 w-5">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12"></path>
@@ -65,14 +65,14 @@ const Home = () => {
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-emerald-600">
                                       </svg>
                                       </div>
-                                      <span data-v-a79b16bd="" className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-emerald-600">Password Protection</span>
+                                      <span  className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-emerald-600">Password Protection</span>
                                 </div>
                             </label>
                             <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-purple-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-purple-400">
                                 <input type="checkbox" className="sr-only" data-testid="landing-option-dates" />
                                 <div className="flex flex-col items-center gap-2 mt-1">
                                     <div className="p-2 rounded-lg transition-colors duration-300 bg-purple-100 group-hover:bg-purple-200">
-                                        <svg data-v-a79b16bd="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-purple-600">
+                                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-purple-600">
                                         </svg>
                                     </div>
                                     <span className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-purple-600">Set Expiration</span>
