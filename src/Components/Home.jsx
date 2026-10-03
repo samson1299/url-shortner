@@ -1,4 +1,4 @@
-
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 const Home = () => {
     return (
         <>
@@ -12,9 +12,9 @@ const Home = () => {
                             <button className="text-[#cbd5e1]">Terms</button>
                         </nav>
                         <div className="absolute right-5 top-1/2 -translate-y-1/2 flex items-center gap-4">
-                            <button className="text-[#cbd5e1] hover:text-white">
+                            <Link to="/Signin" className="text-[#cbd5e1] hover:text-white">
                                 Sign In
-                            </button>
+                            </Link>
 
                             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                                 Start Free
@@ -63,16 +63,16 @@ const Home = () => {
                                 <div className="flex flex-col items-center gap-2 mt-1">
                                     <div className="p-2 rounded-lg transition-colors duration-300 bg-emerald-100 group-hover:bg-emerald-200">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-emerald-600">
-                                      </svg>
-                                      </div>
-                                      <span  className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-emerald-600">Password Protection</span>
+                                        </svg>
+                                    </div>
+                                    <span className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-emerald-600">Password Protection</span>
                                 </div>
                             </label>
                             <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-purple-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-purple-400">
                                 <input type="checkbox" className="sr-only" data-testid="landing-option-dates" />
                                 <div className="flex flex-col items-center gap-2 mt-1">
                                     <div className="p-2 rounded-lg transition-colors duration-300 bg-purple-100 group-hover:bg-purple-200">
-                                        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-purple-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5 transition-colors duration-300 text-purple-600">
                                         </svg>
                                     </div>
                                     <span className="text-sm font-semibold text-center transition-colors duration-300 text-gray-700 group-hover:text-purple-600">Set Expiration</span>
