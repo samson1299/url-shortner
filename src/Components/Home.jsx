@@ -44,6 +44,9 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
+                            <div>
+                                <button className="m-3 px-10 py-5 bg-blue-400 rounded-4xl text-xl hover: ">Convert</button>
+                            </div>
                         </div>
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                             <label className="group relative flex flex-col items-center justify-center p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm dark:border-slate-600 dark:hover:border-blue-400">
