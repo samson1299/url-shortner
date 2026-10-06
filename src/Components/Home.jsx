@@ -1,5 +1,19 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Home = () => {
+   function encoder(number){
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let encoder = '';
+    if(number === 0){
+        return characters = [0];
+    }
+    while(number != 0){
+        division = number % 62;
+        number = number[division] + characters;
+        Math.floor(number/62);
+        console.log(encoder);
+        return encoder; 
+    }
+   }
     return (
         <>
             <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white">
