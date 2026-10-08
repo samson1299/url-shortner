@@ -1,19 +1,29 @@
 import { Link } from "react-router-dom";
 const Home = () => {
-   function encoder(number){
-    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-    let encoder = '';
-    if(number === 0){
-        return characters = [0];
+    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    function encode(number) {
+        let encode = '';
+        if (number === 0) return characters[0];
+        while (number != 0) {
+            const reminder = number % 62;
+            encode = characters[reminder] + encode;
+            number = Math.floor(number / 62);
+            console.log(encode);
+        }
+        return encode;
     }
-    while(number != 0){
-        division = number % 62;
-        number = number[division] + characters;
-        Math.floor(number/62);
-        console.log(encoder);
-        return encoder; 
+    function decode(string) {
+        for (let idx = 0; idx < string.length; idx++) {
+            console.log(string[idx]);
+            console.log(idx);
+            let total = 0;
+            indexOf(string)  = string[idx] * 62;
+            string[idx] = total;
+            return total;
+        }
+
+
     }
-   }
     return (
         <>
             <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white">
