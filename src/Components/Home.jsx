@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 const Home = () => {
-    const [handleurl, setHandleurl] = useState(""); 
+    // const [handleurl, setHandleurl] = useState(""); 
     
     return (
         <>
@@ -49,7 +49,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div>
-                                <button onClick={handleurl} className="m-3 px-10 py-5 bg-blue-400 rounded-4xl text-xl hover: ">Convert</button>
+                                <button  className="m-3 px-10 py-5 bg-blue-400 rounded-4xl text-xl hover: ">Convert</button>
                             </div>
                         </div>
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
