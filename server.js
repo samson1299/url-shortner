@@ -38,8 +38,8 @@ app.post("/api/shorten", async (req, res) => {
     // 5. Respond with { shortCode, shortUrl }.
        res.status(201).json({
         shortCode,
-        
-       })
+        shortUrl :`{process.env.BASE_URL}$/{shortCode}`
+       });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ error: "Internal server Error" })
