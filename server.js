@@ -1,3 +1,4 @@
+import corse from "cors";
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -52,23 +53,26 @@ app.get("/:code", async (req, res) => {
   try {
     // 1. Find the link with this shortCode AND add 1 to clicks, in one database call
     const link = await Url.findOneAndUpdate(
-      {shortCode :code},
-      {$inc :{clicks : 1}},
+      { shortCode: code },
+      { $inc: { clicks: 1 } },
       {
-      returnDocument : "after"
+        returnDocument: "after"
       }
     )
-    if(!link){
-      return res.status(404).json({error :"Invalid url"});
-    }
-    if(link.expiresAt && link.expiresAt < new Date ()){
-      return res.status(410).json({error :"This link has expired"});
-    }
-    res.redirect(302,longUrl);
-    // 2. If nothing was found, respond with 404
 
+
+    res.redirect(302, longUrl);
+    // 2. If nothing was found, respond with 404
+    if (!link) {
+      return res.status(404).json({ error: "Invalid url" });
+    }
     // 3. If it has expired, respond with 410
+    if (link.expiresAt && link.expiresAt < new Date()) {
+      return res.status(410).json({ error: "This link has expired" });
+    }
+
     // 4. Otherwise, redirect to the long URL
+      res.redirect(302,link.longUrl);
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Internal server error" });
