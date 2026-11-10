@@ -1,17 +1,17 @@
-import corse from "cors";
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+
+import { Url } from "./Url.js";
+import { getNextId } from "./Counter.js";
+import { encode } from "./convert.js"
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-import { Url } from "./Url.js";
-import { getNextId } from "./Counter.js";
-import { encode } from "./convert.js";
-import mongoose from "mongoose";
+
 
 app.post("/api/shorten", async (req, res) => {
   const { longUrl } = req.body;
@@ -72,7 +72,7 @@ app.get("/:code", async (req, res) => {
     }
 
     // 4. Otherwise, redirect to the long URL
-      res.redirect(302,link.longUrl);
+    res.redirect(302, link.longUrl);
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Internal server error" });
