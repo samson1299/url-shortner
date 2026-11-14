@@ -11,7 +11,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+const longUrl = normalizeUrl(req.body.longUrl);
+function normalizeUrl(value){
+  if(typeof value != "string") return value;
+  const trimmed = value.trim();
+  if(!longUrl.startsWith("http://") && !longUrl.startsWith("https://")){
+    return "http://"+trimmed;
+  }else{
+    return trimmed;
+  }
+}
 
 app.post("/api/shorten", async (req, res) => {
   const { longUrl } = req.body;
